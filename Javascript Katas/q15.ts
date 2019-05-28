@@ -6,11 +6,10 @@ export const allPermutations = (stringToProcess: string): string[] => {
   }
 
   for (let index = 0; index < characterArray.length; index++) {
-    output.push(
-      characterArray[index] +
-        allPermutations(characterArray.splice(index, 1).join(""))
-    );
+    output.push(characterArray[index] + allPermutations(characterArray.splice(index, 1).join("")));
   }
 
   return output;
 };
+
+// Still working on this one
